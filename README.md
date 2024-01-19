@@ -47,10 +47,10 @@ python preprocessing.py
 python train.py
 python test.py
 ```
-The weight for hard region is set to 4, while you can train and test the model with different weights.
+The hard region weight here is set to 4 as default, while you can train models with different weight by specifying it in the command line as follows:
 ```
-python train.py --weight 5
-python test.py --weight 5
+python train.py --weight 10
+python test.py --weight 10
 ```
 
 ## References
