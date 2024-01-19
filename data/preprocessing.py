@@ -4,7 +4,7 @@ import cv2
 import os
 import numpy as np
 import pandas as pd
-from tqdm import tqdm
+from tqdm import tqdm     
 
 
 # Data preprocessing and 2d images generation
