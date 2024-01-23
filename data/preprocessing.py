@@ -11,11 +11,13 @@ from tqdm import tqdm
 image_path = 'Micro_Ultrasound_Prostate_Segmentation_Dataset/train/micro_ultrasound_scans/'
 mask_path = 'Micro_Ultrasound_Prostate_Segmentation_Dataset/train/expert_annotations/'
 non_exp_path = 'Micro_Ultrasound_Prostate_Segmentation_Dataset/train/non_expert_annotations/'
+list_path = '../TransUNet/lists/'
 out_image_path = 'train_png/'
 test_image_path = 'Micro_Ultrasound_Prostate_Segmentation_Dataset/test/micro_ultrasound_scans/'
 test_mask_path = 'Micro_Ultrasound_Prostate_Segmentation_Dataset/test/expert_annotations/'
 
 os.makedirs(out_image_path, exist_ok=True)
+os.makedirs(list_path, exist_ok=True)
 
 list_of_image = glob.glob(image_path + "*.nii.gz")
 list_of_mask = glob.glob(mask_path + "*.nii.gz")
