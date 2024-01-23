@@ -35,7 +35,25 @@ The code is only for research purposes. If you have any questions regarding how 
 
 ### 2. Prepare data
 * Please go to https://zenodo.org/records/10475293 to download our dataset.
-* After downloading, extract the file and put it into folder "data/".
+* After downloading, extract the file and put it into folder "data/". The directory structure should be as follows:
+
+```bash
+.
+├── data
+│   ├── Micro_Ultrasound_Prostate_Segmentation_Dataset
+│   │       ├── train
+│   │	    └── test
+│   └── preprocessing.py
+│
+├── model
+│   └── vit_checkpoint
+│       └── imagenet21k
+│           ├── R50+ViT-B_16.npz
+│           └── *.npz
+└── TransUNet
+
+```
+
 * Run the preprocessing script, which would generate training images in folder "train_png/", data list files in folder "lists/" and data.csv for overview.
 ```
 python preprocessing.py
@@ -43,14 +61,15 @@ python preprocessing.py
 * Training images are preprocessed to 224*224 to feed into networks.
 
 ### 3. Train/Test
+* Please go to the folder "TransUNet/" and it's ready for you to train and test the model.
 ```
-python train.py
-python test.py
+python train_MicroUS.py
+python test_MicroUS.py
 ```
 The hard region weight here is set to 4 as default, while you can train models with different weight by specifying it in the command line as follows:
 ```
-python train.py --weight 10
-python test.py --weight 10
+python train_MicroUS.py --weight 10
+python test_MicroUS.py --weight 10
 ```
 
 ## References
