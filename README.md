@@ -41,8 +41,8 @@ The code is only for research purposes. If you have any questions regarding how 
 .
 ├── data
 │   ├── Micro_Ultrasound_Prostate_Segmentation_Dataset
-│   │       ├── train
-│   │	    └── test
+│   │   ├── train
+│   │	└── test
 │   └── preprocessing.py
 │
 ├── model
